@@ -29,7 +29,7 @@ export default class CatalogProducts extends Component {
                                 <li className="product-list-item" key={indexPro}>
                                     <article className="product" itemScope itemType="http://schema.org/Product">
                                         <figure className="product-image-wrapper">
-                                            <img className="product-image" src={productLogo} alt="Product"
+                                            <img className="product-image" src={product.cover_image_url} alt="Product"
                                                 itemProp="image" />
                                             {!product.addToWishList ?
                                                 (<button
