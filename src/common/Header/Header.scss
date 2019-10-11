@@ -1,0 +1,61 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    height: 60px;
+    padding: 0 60px;
+    .page-title{
+        font-size: 20px;
+    }
+    .header-bag{
+        display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+        .header-bag-item{
+            height: 25px;
+            display: flex;
+            align-items: flex-end;
+            &.header-bag-count{
+                margin-left: 10px;
+            }
+            &.header-bag-wishlist-count{
+                margin-left: 10px;
+            }
+            .header-bag-price{
+                margin-right: 5px;
+                font-size: 12px;
+                line-height: 20px;
+            }
+            .bag-icon{
+                height: auto;
+                fill: #444A59;
+                width: 17px;
+                transition: .3s fill;
+            }
+            .wishList-icon{
+                height: auto;
+                fill: #444A59;
+                width: 17px;
+                transition: .3s fill;
+            }
+            .bag-item-counter{
+                width: 13px;
+                height: 13px;
+                margin-left: -1px;
+                display: flex;
+                align-self: flex-start;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Lato-Bold', sans-serif;
+                font-size: 8px;
+                text-align: center;
+                border-radius: 50%;
+                color: #ffffff;
+                background-color: #358ED7;
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.catalog-page {
+	display: flex;
+	flex-direction: row;
+	flex: 1 0 auto;
+	margin: 30px 0 20px;
+	.catalog-container {
+		.product-list {
+            list-style-type: none;
+			display: flex;
+			flex: 0 1 auto;
+			flex-flow: row wrap;
+			margin: 0 auto;
+			padding: 0;
+			.product-list-item {
+				box-sizing: border-box;
+				padding: 10px;
+				flex: 1 0 33.3333%;
+				max-width: 33.3333%;
+				.product {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					background-color: #ffffff;
+					.product-image-wrapper {
+						padding: 20px;
+						position: relative;
+						text-align: center;
+						.product-image {
+							max-width: 100%;
+							height: auto;
+                        }
+                        .product-wishlist-button {
+							outline: none;
+                            width: 35px;
+                            height: 35px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            top: 10px;
+							right: 10px;
+							
+                            &.button {
+                                border: 1px solid #d9d9d9;
+                                border-radius: 100px;
+                                background-color: #ffffff;
+                                cursor: pointer;
+                                transition: .3s border, .3s color, .3s background-color;
+                            }
+                            &.button-round {
+                                display: block;
+                                border-radius: 50%;
+                            }
+                            &.button-wishlist{
+                                .wishList-icon {
+                                    #Wishlist-Icon{
+                                        width: 20px;
+                                        height: 20px;
+                                        fill: #d9d9d9;
+                                        transition: .3s fill;
+                                    }
+                                    svg{
+                                     width: 20px;
+                                     height: 20px;
+                                     fill: #d9d9d9;
+                                     transition: .3s fill;
+                                    }
+                                 }
+                                &:hover {
+                                    border: 1px solid #444A59;
+                                    #Wishlist-Icon {
+                                        fill: #444A59;
+                                    }
+                                }
+							}
+							&.btn-added-wishList{
+								border: 1px solid #444A59;
+								.wishList-icon {
+									#Wishlist-Icon{
+										fill: #444A59;
+									}
+								}
+							}
+                        }
+					}
+				}
+				.product-details {
+					display: flex;
+					flex: 1 0 auto;
+					flex-direction: column;
+					padding: 10px 20px 20px;
+					text-align: center;
+					.product-title {
+						padding-bottom: 10px;
+						font-family: 'Lato-Bold', sans-serif;
+						font-size: 14px;
+						letter-spacing: 1.37px;
+						text-transform: uppercase;
+					}
+					.product-subtitle {
+						padding-bottom: 10px;
+						font-size: 12px;
+						line-height: 19px;
+						letter-spacing: 0.43px;
+						color: #808080;
+					}
+					.product-price {
+						padding-bottom: 20px;
+						font-family: 'Lato-Bold', sans-serif;
+						font-size: 14px;
+						letter-spacing: 2.33px;
+						.product-price-strike {
+							margin-right: 10px;
+							text-decoration: line-through;
+						}
+						.product-price-discounted {
+							color: #F54B5E;
+						}
+					}
+					.product-add-to-cart {
+						width: 100%;
+						margin-top: 10px;
+						margin-top: auto;
+						outline: none;
+						&.button {
+							border: 1px solid #d9d9d9;
+							border-radius: 100px;
+							background-color: #ffffff;
+							cursor: pointer;
+							transition: .3s border, .3s color, .3s background-color;
+						}
+						&.button-primary {
+							padding: 13px;
+							font-family: 'Lato-Bold', sans-serif;
+							font-size: 13px;
+							text-transform: uppercase;
+							letter-spacing: 1.39px;
+						}
+						&.button-in-cart{
+							pointer-events: none;
+							background-color: #d9d9d9;
+						}
+					}
+				}
+			}
+		}
+	}
+}

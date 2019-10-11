@@ -1,0 +1,35 @@
+.pagination {
+    text-align: center;
+    height: 40px;
+    .arrow{
+        cursor: pointer;
+        &.disable{
+            color: red;
+            cursor: not-allowed;
+        }
+        &.left-arrow {
+            padding-right: 20px;
+        }
+        &.right-arrow {
+            padding-left: 10px;
+        }
+    }
+    .pageNumber{
+        width: 20px; 
+        padding: 10px;
+        cursor: pointer;
+        margin-right: 10px; 
+    }
+    .pageNumberActive{
+        width: 20px; 
+        padding: 10px;
+        background: #63f1d6;
+        cursor: pointer;
+        margin-right: 10px; 
+    }
+    .pageDots{
+        width: 20px; 
+        padding: 10px;
+        margin-right: 10px; 
+    }
+}

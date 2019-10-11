@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+body{
+  min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 13px;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #444A59;
+    background-color: #f8f8f8
+}
+
+.container{
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 40px;
+  margin: 0 auto;
+  position: relative;
+}
+.clearfix::before{
+  content: '';
+}
+.clearfix::after{
+  content: '';
+  clear:both;
+}
