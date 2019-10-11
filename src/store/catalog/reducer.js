@@ -1,13 +1,16 @@
 import {
     CATALOGFETCHPRODUCTS,
     ADDTOCART,
-    ADDTOWISHLIST
+    ADDTOWISHLIST,
+    SHOWSPINNER,
+    HIDESPINNER
 } from 'store/types'
 const initialState = {
     catalogPoducts: [],
     cart: [],
     wishList: [],
     cartTotal: 0,
+    spinner: false
 };
 
 export default function (state = initialState, action) {
@@ -23,6 +26,10 @@ export default function (state = initialState, action) {
             const wishListIn = Object.assign([], state.wishList)
             wishListIn.push(action.payload)
             return { ...state, wishList: wishListIn };
+        case SHOWSPINNER:
+            return { ...state, spinner: action.payload };
+        case HIDESPINNER:
+            return { ...state, spinner: action.payload };
         default:
             return state;
     }

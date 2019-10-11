@@ -1,7 +1,17 @@
-import { CATALOGFETCHPRODUCTS, ADDTOCART, ADDTOWISHLIST } from 'store/types'
+import {
+    CATALOGFETCHPRODUCTS,
+    ADDTOCART,
+    ADDTOWISHLIST,
+    SHOWSPINNER,
+    HIDESPINNER
+} from 'store/types'
 import axios from "axios";
 
 export const fetchCatalogProducts = (limit, offset) => async dispatch => {
+    dispatch({
+        type: SHOWSPINNER,
+        payload: true
+    });
     const res = await axios.get(
         `https://api.musement.com/api/v3/venues/164/activities`
     ).then(response => {
@@ -14,6 +24,10 @@ export const fetchCatalogProducts = (limit, offset) => async dispatch => {
     dispatch({
         type: CATALOGFETCHPRODUCTS,
         payload: res
+    });
+    dispatch({
+        type: HIDESPINNER,
+        payload: false
     });
 };
 

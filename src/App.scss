@@ -39,9 +39,10 @@ body{
 .container{
   width: 100%;
   max-width: 1240px;
-  padding: 0 40px;
+  /* padding: 0 40px; */
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box;
 }
 .clearfix::before{
   content: '';
