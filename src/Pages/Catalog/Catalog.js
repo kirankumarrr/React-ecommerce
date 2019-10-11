@@ -113,7 +113,7 @@ class Catalog extends Component {
 const mapStateToProps = state => ({
     catalogPoducts: state.catalog.catalogPoducts,
     cart: state.catalog.cart,
-    spinner: state.catalog.spinner
+
 });
 
 export default connect(
